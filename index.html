@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTA RP Editor de imagen</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.cdnfonts.com/css/pricedown" rel="stylesheet">
+
+  <script src="./images.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-camera">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path
+        d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" />
+      <path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+    </svg>
+    <h1>Editor de imágenes de GTA Roleplay</h1>
+  </header>
+
+  <main>
+    <div class="grid-layout">
+      <div class="info">
+        <h2>Sube tu imagen</h2>
+        <p class="info-description">Carga el archivo de tu imagen o añádela con un simple copiar y pegar</p>
+        <label for="fileInput">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-camera-up">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M12 20h-7a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v3.5" />
+            <path d="M12 16a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" />
+            <path d="M19 22v-6" />
+            <path d="M22 19l-3 -3l-3 3" />
+          </svg>
+          <p>CARGAR IMAGEN</p>
+        </label>
+        <input type="file" id="fileInput" accept="image/*">
+      </div>
+
+      <div class="text-container">
+        <header class="text-header">
+            <h2>Líneas de texto</h2>
+            <button class="add-line" id="addTextBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 5l0 14" />
+                  <path d="M5 12l14 0" />
+                </svg>
+            </button>
+        </header>
+        <div id="lines">
+            <div class="text-line">
+                <select name="roleaction" id="roleaction">
+                    <option value="talk" style="font-weight: bold;">talk</option>
+                    <option value="me" style="color: #A78CBC; font-weight: bold;">/me</option>
+                    <option value="do" style="color: #94C530; font-weight: bold;">/do</option>
+                </select>
+                <input type="text" id="text">
+            </div>
+        </div>
+      </div>
+
+
+      <canvas id="canvas" width="1280" height="720"></canvas>
+    </div>
+
+    <div class="download-div">
+      <button id="downloadBtn" class="download-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-download">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+            <path d="M7 11l5 5l5 -5" />
+            <path d="M12 4l0 12" />
+          </svg>
+          <span>DESCARGAR IMAGEN</span>
+      </button>
+    </div>
+  </main>
+
+  <footer>
+    <p class="footer-text">Creado para evitar aplicaciones fraudulentas como las de Guillermo alias Wiliye.</p>
+  </footer>
+
+</body>
+
+</html>
