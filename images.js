@@ -37,6 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
               image = img;
               canvas.width = img.width;
               canvas.height = img.height;
+
+              document.fonts.load('16px "TextoImagen');
+
               drawCanvas();
           };
           img.src = event.target.result;
@@ -142,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (image) ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
       texts.forEach((t) => {
-          ctx.font = `${t.size}px Poppins`;
+          ctx.font = `${t.size}px TextoImagen`;
           ctx.textBaseline = "top";
           ctx.fillStyle = getColorByType(t.type);
           ctx.lineWidth = 1;
